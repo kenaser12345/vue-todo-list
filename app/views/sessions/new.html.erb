@@ -1,0 +1,11 @@
+<h1> 登入 </h1>
+
+<h1> <%= @error_message %> </h1>
+
+<%= form_for @user, url: login_path do |f| %>
+    <%= f.label "密碼" %>
+    <%= f.text_field :password %>
+    <%= f.label "信箱" %>
+    <%= f.text_field :email %>
+    <%= f.submit "login" %>
+<% end %>
