@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   before_action :find_session_user, only: [:create]
-
+  skip_before_action :check_user
   def new
     @user = User.new
   end
@@ -8,8 +8,7 @@ class SessionsController < ApplicationController
    def create
     if @user && @user.authenticate(params[:user][:password])
       session[:user_id] = @user.id
-      flash[:notice]= "成功登入"
-      redirect_to login_path, notice: '登入成功'
+      redirect_to root_path, notice: '登入成功'
     else
       redirect_to login_path, notice: '輸入錯誤'
     end

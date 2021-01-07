@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
   before_action :find_task, only: [:edit, :update, :destroy, :show]
   def index
-    @tasks = Task.all
+    @tasks = current_user.tasks
   end
   
   def show
@@ -12,7 +12,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(task_params)
+    @task = current_user.tasks.create(task_params)
     if @task.save
       redirect_to root_path, notice: '新增任務成功!'
     else
