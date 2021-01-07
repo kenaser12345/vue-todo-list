@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
-  
+  root 'tasks#index'
   #session
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
 
   #user
-  resource :users, only: [:new, :create]
+  resources :users, only: [:new, :create]
+
+  #task
+  resources :tasks
 end
