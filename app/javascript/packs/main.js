@@ -61,7 +61,7 @@ Vue.use(TurbolinksAdapter)
 
 document.addEventListener('turbolinks:load', () => {
   const app = new Vue({
-    el: '#hello',
+    el: '#app',
     data: () => {
       return {
         message: "Can you say hello?"
@@ -69,4 +69,7 @@ document.addEventListener('turbolinks:load', () => {
     },
     components: { App }
   })
+
+  
+  console.log("123")
 })
