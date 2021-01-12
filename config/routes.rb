@@ -10,4 +10,11 @@ Rails.application.routes.draw do
 
   #task
   resources :tasks
+
+  #api
+  namespace :api do
+    namespace :v1 do
+      post 'get_task_info', to: 'tasks#get_task_info'
+    end 
+  end
 end
