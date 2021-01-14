@@ -33,6 +33,7 @@ gem 'pg'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'factory_bot_rails', '~> 6.1'
 end
 
 group :development do
@@ -55,7 +56,6 @@ group :test do
   gem 'webdrivers'
   # rspec
   gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
-  gem 'factory_girl_rails', '~> 4.9'
   gem 'faker', '~> 2.15', '>= 2.15.1'
 end
 

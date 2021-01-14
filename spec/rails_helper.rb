@@ -60,4 +60,12 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+
+  private
+  def user_login(user)
+    visit new_session_path
+    fill_in '信箱', with: user.email
+    fill_in '密碼', with: user.password
+    click_button "login"
+  end
 end
