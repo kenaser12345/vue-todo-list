@@ -2,6 +2,6 @@ FactoryBot.define do
   factory :task do
     name {"Tasktest"}
     description {"testtest"}
-    association {:user}
+    association :user
   end
 end

@@ -1,5 +1,7 @@
 
 <div class="bg">
+  <%= link_to "登出", logout_path, method: 'delete'%>
+
   <div class="bg_top"></div>
   <div class="bg_bottom"></div>
     <tasks :tasks="<%= @tasks.to_json%>">
