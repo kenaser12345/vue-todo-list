@@ -1,7 +1,3 @@
 <%= form_for @task do |f| %>
-    <%= f.label "名稱" %>
-    <%= f.text_field :name, id: "task_name"%>
-    <%= f.label "描述" %>
-    <%= f.text_area :description, id: "task_description" %>
-    <%= f.submit "create" %>
+    <%= render 'task_form', task: @task, f: f %>
 <% end %> 

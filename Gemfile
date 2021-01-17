@@ -59,6 +59,7 @@ group :test do
   gem 'faker', '~> 2.15', '>= 2.15.1'
   gem 'capybara-screenshot', '~> 1.0', '>= 1.0.25'
   gem 'chromedriver-helper', '~> 2.1', '>= 2.1.1'
+  gem 'launchy'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -1,7 +1,6 @@
-<%= form_for task , url: { action: 'update' },method: :patch do |f| %>
-    <%= f.label "任務名稱" %>
-    <%= f.text_field :name %>
-    <%= f.label "任務描述" %>
-    <%= f.text_field :description %>
-    <%= f.submit "送出" %>
-<% end %> 
+
+<%= f.label "名稱" %>
+<%= f.text_field :name, id: "task_name"%>
+<%= f.label "描述" %>
+<%= f.text_area :description, id: "task_description" %>
+<%= f.submit "create" %>

@@ -250,6 +250,7 @@ DEPENDENCIES
   faker (~> 2.15, >= 2.15.1)
   foreman
   jbuilder (~> 2.7)
+  launchy
   listen (~> 3.3)
   pg
   puma (~> 5.0)
